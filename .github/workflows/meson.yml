@@ -2,7 +2,7 @@ name: nvme-cli meson CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, 'dev/ci-cross' ]
   pull_request:
     branches: [ master ]
 
