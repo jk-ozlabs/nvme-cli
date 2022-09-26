@@ -49,7 +49,7 @@ jobs:
       - uses: BSFishy/meson-build@v1.0.3
         with:
           # suppress python for now; the python headers currently assume native
-          setup-options: --werror --cross-file=.github/cross/ubuntu-armhf.txt --wrap-mode=nofallback -Dpython=false
+          setup-options: --werror --cross-file=.github/cross/ubuntu-armhf.txt -Dpython=false
           options: --verbose
           action: build
       - uses: actions/upload-artifact@v3
@@ -79,7 +79,7 @@ jobs:
       - uses: BSFishy/meson-build@v1.0.3
         with:
           # suppress python for now; the python headers currently assume native
-          setup-options: --werror --cross-file=.github/cross/ubuntu-ppc64le.txt --wrap-mode=nofallback -Dpython=false
+          setup-options: --werror --cross-file=.github/cross/ubuntu-ppc64le.txt -Dpython=false
           options: --verbose
           action: build
       - uses: actions/upload-artifact@v3
